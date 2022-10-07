@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
+/* html {
+  height: 100%;
+} */
+
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+p,
+ul {
+  margin: 0;
+}
+
+.body {
+  color: white;
+}
+
+#root {
+  background: linear-gradient(rgb(9, 9, 126), pink);
+}
+
+/* @media (max-width: 760px) {
+  html {
+    height: auto;
+  }
+} */
+
+/* @media (max-height: 790px) {
+  html {
+    height: auto;
+  }
+} */

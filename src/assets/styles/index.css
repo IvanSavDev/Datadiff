@@ -5,36 +5,30 @@
   src: url('../fonts/Roboto-Regular.ttf');
 }
 
-/* html {
-  height: 100%;
-} */
-
 * {
   box-sizing: border-box;
   font-family: Roboto;
 }
 
 p,
-ul {
+ul,
+pre {
   margin: 0;
 }
 
 .body {
-  color: white;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 #root {
-  background: linear-gradient(rgb(9, 9, 126), pink);
+  min-height: 100vh;
+  background: linear-gradient(rgb(46, 148, 155), rgb(160, 65, 224));
 }
 
-/* @media (max-width: 760px) {
-  html {
-    height: auto;
-  }
-} */
-
-/* @media (max-height: 790px) {
-  html {
-    height: auto;
-  }
-} */
+.wrapper-text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

@@ -31,13 +31,12 @@ const Input = styled.input`
   z-index: -1;
 `;
 
-const AddFile = ({
-  addFile,
-  name,
-}: {
+type Props = {
   addFile: React.Dispatch<React.SetStateAction<string>>;
   name: string;
-}) => {
+};
+
+const AddFile = ({ addFile, name }: Props) => {
   function readFile(input: HTMLInputElement) {
     const files = input.files;
     if (files) {

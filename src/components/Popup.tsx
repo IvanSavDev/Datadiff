@@ -37,24 +37,20 @@ const Error = styled.span`
   color: red;
 `;
 
-const Popap = ({
-  error,
-  startTimer,
-  stopTimer,
-}: {
+type Props = {
   error: string;
   startTimer: number;
   stopTimer: React.Dispatch<React.SetStateAction<string>>;
-}) => {
-  return (
-    <Wrapper>
-      <div>
-        <Error>Error: </Error>
-        {error}
-      </div>
-      <Timer startTimer={startTimer} stopTimer={stopTimer}></Timer>
-    </Wrapper>
-  );
 };
+
+const Popap = ({ error, startTimer, stopTimer }: Props) => (
+  <Wrapper>
+    <div>
+      <Error>Error: </Error>
+      {error}
+    </div>
+    <Timer startTimer={startTimer} stopTimer={stopTimer}></Timer>
+  </Wrapper>
+);
 
 export default Popap;

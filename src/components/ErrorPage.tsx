@@ -12,17 +12,13 @@ const Wrapper = styled.div`
   min-height: 100vh;
 `;
 
-const ErrorPage = () => {
-  return (
-    <Wrapper>
-      <span>
-        Что-то пошло не так, попробуйте вернуться на начальную страницу
-      </span>
-      <Button as={Link} to="/">
-        Назад
-      </Button>
-    </Wrapper>
-  );
-};
+const ErrorPage = () => (
+  <Wrapper>
+    <span>Что-то пошло не так, попробуйте вернуться на начальную страницу</span>
+    <Button as={Link} to="/">
+      Назад
+    </Button>
+  </Wrapper>
+);
 
 export default ErrorPage;

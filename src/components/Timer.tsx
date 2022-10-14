@@ -15,14 +15,13 @@ const WrapperTimer = styled.div`
   font-size: 0.8rem;
 `;
 
-const Timer = ({
-  startTimer,
-  stopTimer,
-}: {
+type Props = {
   startTimer: number;
   stopTimer: React.Dispatch<React.SetStateAction<string>>;
-}) => {
-  const [time, setTime] = useState<number>(startTimer);
+};
+
+const Timer = ({ startTimer, stopTimer }: Props) => {
+  const [time, setTime] = useState(startTimer);
 
   useEffect(() => {
     if (time === startTimer) {

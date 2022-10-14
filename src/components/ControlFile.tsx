@@ -24,15 +24,13 @@ const WrapperOptions = styled.div<{ gridArea: string }>`
   gap: 10px;
 `;
 
-const ControlFile = ({
-  text,
-  changeText,
-  name,
-}: {
+type Props = {
   text: string;
   changeText: React.Dispatch<React.SetStateAction<string>>;
   name: string;
-}) => (
+};
+
+const ControlFile = ({ text, changeText, name }: Props) => (
   <>
     <WrapperOptions gridArea={`${name}FileOptions`}>
       <AddFile addFile={changeText} name={name} />

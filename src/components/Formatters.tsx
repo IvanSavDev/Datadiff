@@ -20,22 +20,20 @@ const FormattersText = styled.p`
   }
 `;
 
-const Formatters = () => {
-  return (
-    <WrapperSelect>
-      <FormattersText>Формат результата: </FormattersText>
-      <Select
-        tabIndex={8}
-        name="outputFormat"
-        defaultState="stylish"
-        width="100%"
-      >
-        <option value="stylish">Stylish</option>
-        <option value="plain">Plain</option>
-        <option value="json">JSON</option>
-      </Select>
-    </WrapperSelect>
-  );
-};
+const Formatters = () => (
+  <WrapperSelect>
+    <FormattersText>Формат результата: </FormattersText>
+    <Select
+      tabIndex={8}
+      name="outputFormat"
+      defaultState="stylish"
+      width="100%"
+    >
+      <option value="stylish">Stylish</option>
+      <option value="plain">Plain</option>
+      <option value="json">JSON</option>
+    </Select>
+  </WrapperSelect>
+);
 
 export default Formatters;

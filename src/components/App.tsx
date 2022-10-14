@@ -98,9 +98,6 @@ function App() {
       navigate('/result', { state: result });
     } catch (error) {
       setError('Неверный формат файла');
-      // setTimeout(() => {
-      //   setError('');
-      // }, 5000);
     }
   };
 

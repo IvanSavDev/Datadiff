@@ -20,6 +20,7 @@ pre {
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 #root {

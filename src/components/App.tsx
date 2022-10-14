@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import type {} from 'styled-components/cssprop';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+import diff from '../utils/diff';
+import parser from '../utils/parser';
+import getFormat from '../utils/formatters';
 import Formatters from './Formatters';
 import { Compare } from './Buttons/Button';
-import parser from '../utils/parser';
-import diff from '../utils/diff';
-import getFormat from '../utils/formatters';
 import ControlFile from './ControlFile';
 import ResultPage from './ResultPage';
-import { useNavigate } from 'react-router-dom';
 import Description from './Description';
+import PopupPortal from '../Portals/PopupPortal';
 
 const Wrapper = styled.div`
   display: flex;
@@ -74,22 +75,33 @@ function App() {
   const [firstText, setFirstText] = useState('');
   const [secondText, setSecondText] = useState('');
   const [comparisonResult, setComparisonResult] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const submitHandler = (event: React.SyntheticEvent) => {
-    event.preventDefault();
-    const files = event.target as File;
-    const firstFileInputFormat = files.firstFileInputFormat.value;
-    const secondFileInputFormat = files.secondFileInputFormat.value;
-    const firstFileContents = files.firstFile.value;
-    const secondFileContents = files.secondFile.value;
-    const outputFormat = files.outputFormat.value;
-    const firstParsedFile = parser(firstFileContents, firstFileInputFormat);
-    const secondParsedFile = parser(secondFileContents, secondFileInputFormat);
-    const diffFiles = diff(firstParsedFile, secondParsedFile);
-    const result = getFormat(diffFiles, outputFormat);
-    setComparisonResult(result);
-    navigate('/result', { state: result });
+    try {
+      event.preventDefault();
+      const files = event.target as File;
+      const firstFileInputFormat = files.firstFileInputFormat.value;
+      const secondFileInputFormat = files.secondFileInputFormat.value;
+      const firstFileContents = files.firstFile.value;
+      const secondFileContents = files.secondFile.value;
+      const outputFormat = files.outputFormat.value;
+      const firstParsedFile = parser(firstFileContents, firstFileInputFormat);
+      const secondParsedFile = parser(
+        secondFileContents,
+        secondFileInputFormat
+      );
+      const diffFiles = diff(firstParsedFile, secondParsedFile);
+      const result = getFormat(diffFiles, outputFormat);
+      setComparisonResult(result);
+      navigate('/result', { state: result });
+    } catch (error) {
+      setError('Неверный формат файла');
+      // setTimeout(() => {
+      //   setError('');
+      // }, 5000);
+    }
   };
 
   return (
@@ -120,6 +132,9 @@ function App() {
             />
           </Form>
         </Main>
+      )}
+      {error && (
+        <PopupPortal error={error} startTimer={5} stopTimer={setError} />
       )}
     </Wrapper>
   );

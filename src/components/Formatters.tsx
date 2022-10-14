@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import Select from './Buttons/Select';
 
 const WrapperSelect = styled.div`
-  align-self: flex-start;
-  color: white;
-  width: 100%;
   grid-area: formatters;
+  align-self: flex-start;
+  width: 100%;
+  color: white;
   @media (max-width: 760px) {
     width: auto;
   }

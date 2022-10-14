@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import loadImg from '../assets/img/load.svg';
 
 const Label = styled.label`
-  flex-shrink: 0;
   display: inline-block;
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
   background-image: url(${loadImg});

@@ -9,13 +9,13 @@ const Textarea = styled.textarea<{ gridArea: string }>`
   height: 100%;
   min-height: 200px;
   padding: 10px;
-  resize: none;
   outline: none;
   border: none;
   box-shadow: 0 0 5px black;
   background-color: #3d3d3d;
   border-radius: 15px;
   color: white;
+  resize: none;
 `;
 
 const WrapperOptions = styled.div<{ gridArea: string }>`

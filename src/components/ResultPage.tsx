@@ -9,18 +9,19 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 20px 20px;
-  min-height: 100vh;
+  width: 80%;
   max-width: 1440px;
+  min-height: 100vh;
   margin: 0 auto;
+  padding: 20px 20px;
 `;
 
 const Pre = styled.pre`
+  width: 100%;
   padding: 15px 15px;
   overflow: auto;
-  background-color: #3d3d3d;
   border-radius: 15px;
-  width: 80%;
+  background-color: #3d3d3d;
 `;
 
 const Code = styled.code`

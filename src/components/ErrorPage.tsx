@@ -6,9 +6,9 @@ import { Button } from './Buttons/Button';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   min-height: 100vh;
 `;
 

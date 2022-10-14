@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import type {} from 'styled-components/cssprop';
 import styled from 'styled-components';
 import Formatters from './Formatters';
 import { Compare } from './Buttons/Button';
@@ -13,10 +14,10 @@ import Description from './Description';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
-  min-height: 100vh;
   max-width: 1440px;
+  min-height: 100vh;
   margin: 0 auto;
+  padding: 0 20px;
 `;
 
 const Form = styled.form`
@@ -28,9 +29,9 @@ const Form = styled.form`
     'firstField formatters secondField'
     'firstField compare secondField';
   gap: 10px;
+  flex-grow: 1;
   max-height: 650px;
   padding: 20px 0;
-  flex-grow: 1;
   @media (max-width: 760px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr auto auto 1fr;
@@ -56,9 +57,9 @@ const Main = styled.main`
 
 const WrapperHeader = styled.div`
   display: inline-block;
-  background-color: #3d3d3d;
   padding: 10px;
   border-radius: 15px;
+  background-color: #3d3d3d;
 `;
 
 type File = EventTarget & {

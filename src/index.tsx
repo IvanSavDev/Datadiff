@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { RouterProvider, Navigate, createHashRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import App from './components/App';
 import ErrorPage from './components/ErrorPage';
 import './assets/styles/normalize.css';
 import './assets/styles/index.css';
 import ResultPage from './components/ResultPage';
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,

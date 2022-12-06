@@ -30,6 +30,7 @@ export const Compare = styled(Button)`
   justify-self: center;
   width: 100%;
   @media (max-width: 760px) {
+    align-self: center;
     justify-self: end;
     width: auto;
   }

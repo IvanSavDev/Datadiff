@@ -1,24 +1,22 @@
 {
-  "common": {
+  "group1": {
     "follow": false,
     "setting1": "Value 1",
     "setting3": null,
-    "setting4": "blah blah",
+    "setting4": "340",
     "setting5": {
-      "key5": "value5"
+      "color": "orange"
     },
     "setting6": {
-      "key": "value",
-      "ops": "vops",
-      "doge": {
-        "wow": "so much"
-      }
+      "key": "cost",
+      "value": "500",
+      "currencies": ["EUR", "RUB", "USD"]
     }
   },
-  "group1": {
-    "foo": "bar",
-    "baz": "bars",
-    "nest": "str"
+  "group2": {
+    "type": "string",
+    "size": "11",
+    "value": "development"
   },
   "group3": {
     "deep": {
@@ -26,6 +24,6 @@
         "number": 45
       }
     },
-    "fee": 100500
+    "rest": 1250
   }
 }
